@@ -30,19 +30,19 @@ body{
   overflow-x:hidden;
   background-image:radial-gradient(ellipse 80% 50% at 50% -5%, rgba(201,169,110,0.09) 0%, transparent 65%);
 }
-
+ 
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 @keyframes shimmer{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(201,169,110,0.35)}50%{box-shadow:0 0 0 14px rgba(201,169,110,0)}}
 @keyframes btnShine{0%{left:-60%}100%{left:150%}}
-
+ 
 .page{
   max-width:540px;
   margin:0 auto;
   padding:40px 20px 64px;
   display:flex;flex-direction:column;align-items:center;gap:28px;
 }
-
+ 
 /* AVISO VERDE */
 .aviso-verde{
   width:100%;
@@ -54,7 +54,7 @@ body{
   animation:fadeUp 0.6s ease both;
 }
 .aviso-verde strong{color:#4ade80}
-
+ 
 /* TAG TOPO */
 .top-tag{
   background:rgba(201,169,110,0.1);
@@ -65,7 +65,7 @@ body{
   text-transform:uppercase;color:var(--gold);
   animation:fadeUp 0.6s ease both;
 }
-
+ 
 /* HERO */
 .hero{
   text-align:center;
@@ -80,14 +80,14 @@ body{
 .hero-sub{
   font-size:15px;color:var(--muted);line-height:1.7;max-width:420px;margin:0 auto;
 }
-
+ 
 /* DIVISOR */
 .divider{
   width:100%;height:1px;
   background:linear-gradient(to right,transparent,var(--gold),transparent);
   animation:fadeUp 0.6s ease 0.3s both;
 }
-
+ 
 /* PROBLEMA */
 .problem-box{
   width:100%;
@@ -100,7 +100,7 @@ body{
   font-style:italic;
 }
 .problem-box p strong{color:var(--gold);font-style:normal}
-
+ 
 /* MÓDULOS */
 .modules-wrap{
   width:100%;
@@ -125,7 +125,7 @@ body{
   font-size:14px;font-weight:600;color:var(--offwhite);margin-bottom:4px;
 }
 .module-text p{font-size:12px;color:var(--muted);line-height:1.5}
-
+ 
 /* DEPOIMENTO */
 .depo{
   width:100%;
@@ -146,7 +146,7 @@ body{
   color:var(--offwhite);margin-bottom:12px;
 }
 .depo-author{font-size:12px;color:var(--muted)}
-
+ 
 /* PREÇO */
 .price-wrap{
   width:100%;text-align:center;
@@ -170,7 +170,7 @@ body{
   font-size:13px;font-weight:700;color:var(--gold);
 }
 .price-parcel{font-size:13px;color:var(--muted)}
-
+ 
 /* BOTÃO UPSELL */
 .upsell-wrap{
   width:100%;
@@ -180,6 +180,7 @@ body{
   display:flex!important;flex-direction:column;align-items:center;gap:16px;
 }
 .upsell-wrap #kiwify-upsell-trigger-DJozjdY{
+  display:block!important;
   width:100%!important;
   background:linear-gradient(135deg,var(--gold-dark),var(--gold),var(--gold-light))!important;
   background-size:200% 200%!important;
@@ -191,19 +192,37 @@ body{
   border:none!important;
   cursor:pointer!important;
   animation:shimmer 4s ease infinite, pulse 2.5s ease infinite!important;
-  position:relative;overflow:hidden;
-  transition:transform 0.2s!important;
+  transition:transform 0.2s,box-shadow 0.2s!important;
+  box-sizing:border-box!important;
+  text-align:center!important;
+  letter-spacing:0.3px!important;
 }
 .upsell-wrap #kiwify-upsell-trigger-DJozjdY:hover{
   transform:translateY(-3px)!important;
+  box-shadow:0 14px 40px rgba(201,169,110,0.3)!important;
 }
 .upsell-wrap #kiwify-upsell-cancel-trigger-DJozjdY{
-  font-size:13px!important;color:var(--muted)!important;
-  text-decoration:underline!important;
+  display:block!important;
+  width:100%!important;
+  font-size:15px!important;
+  color:var(--gold)!important;
   font-family:'DM Sans',sans-serif!important;
-  cursor:pointer;
+  cursor:pointer!important;
+  text-decoration:none!important;
+  margin-top:12px!important;
+  padding:14px 20px!important;
+  border:1px solid var(--border2)!important;
+  border-radius:10px!important;
+  text-align:center!important;
+  background:transparent!important;
+  transition:all 0.2s!important;
+  box-sizing:border-box!important;
 }
-
+.upsell-wrap #kiwify-upsell-cancel-trigger-DJozjdY:hover{
+  background:rgba(201,169,110,0.05)!important;
+  border-color:var(--gold)!important;
+}
+ 
 /* GARANTIA */
 .garantia{
   display:flex;align-items:center;gap:12px;
@@ -215,7 +234,7 @@ body{
 .garantia-icon{font-size:32px;flex-shrink:0}
 .garantia-text h4{font-size:13px;font-weight:600;color:var(--offwhite);margin-bottom:2px}
 .garantia-text p{font-size:12px;color:var(--muted);line-height:1.5}
-
+ 
 @media(max-width:400px){
   .hero-title{font-size:29px}
   .price-value{font-size:42px}
@@ -225,32 +244,32 @@ body{
 </head>
 <body>
 <div class="page">
-
+ 
   <!-- AVISO VERDE -->
   <div class="aviso-verde">
     ✅ <strong>Sua compra está confirmada.</strong> Você vai receber seu acesso por e-mail. Antes de ir para o app, preparamos uma oferta especial para você. Ela é completamente opcional.
   </div>
-
+ 
   <!-- TAG -->
   <div class="top-tag">🔥 Oferta exclusiva — apenas agora</div>
-
+ 
   <!-- HERO -->
   <div class="hero">
     <h1 class="hero-title">Espera — seu plano está<br><em>incompleto sem isso.</em></h1>
     <p class="hero-sub">Você tem o diagnóstico e o plano. Mas sem as mensagens certas para cada momento, você vai travar na hora que mais importa.</p>
   </div>
-
+ 
   <div class="divider"></div>
-
+ 
   <!-- PROBLEMA -->
   <div class="problem-box">
     <p>Saber o que fazer é diferente de <strong>saber o que escrever.</strong> O Arsenal foi criado para resolver exatamente isso — com mensagens prontas organizadas pelo perfil emocional <strong>dele</strong>, para cada fase da reconquista.</p>
   </div>
-
+ 
   <!-- MÓDULOS -->
   <div class="modules-wrap">
     <div class="modules-label">o que você recebe agora</div>
-
+ 
     <div class="module-item">
       <span class="module-icon">💬</span>
       <div class="module-text">
@@ -258,7 +277,7 @@ body{
         <p>Organizadas pelo perfil emocional dele — Distante, Neutro, com Saudade ou Confuso. Você escolhe a situação e usa a mensagem certa.</p>
       </div>
     </div>
-
+ 
     <div class="module-item">
       <span class="module-icon">🎯</span>
       <div class="module-text">
@@ -266,7 +285,7 @@ body{
         <p>3 perguntas que identificam a fase emocional dele agora — e o protocolo exato para cada fase.</p>
       </div>
     </div>
-
+ 
     <div class="module-item">
       <span class="module-icon">📅</span>
       <div class="module-text">
@@ -274,7 +293,7 @@ body{
         <p>Ações diárias concretas para executar. Sem improviso, sem travar, sem errar o timing.</p>
       </div>
     </div>
-
+ 
     <div class="module-item">
       <span class="module-icon">🛡️</span>
       <div class="module-text">
@@ -283,14 +302,14 @@ body{
       </div>
     </div>
   </div>
-
+ 
   <!-- DEPOIMENTO -->
   <div class="depo">
     <div class="depo-stars">⭐⭐⭐⭐⭐</div>
     <p class="depo-text">"Usei a mensagem do perfil Apegada no segundo dia e ele respondeu em 4 minutos. Nunca tinha acontecido isso em semanas."</p>
     <span class="depo-author">— Mariana T. · Rio de Janeiro, RJ</span>
   </div>
-
+ 
   <!-- PREÇO -->
   <div class="price-wrap">
     <p class="price-old">De R$197</p>
@@ -300,16 +319,16 @@ body{
     </div>
     <p class="price-parcel">ou 3x de R$32,33 sem juros · Acesso imediato</p>
   </div>
-
+ 
   <!-- BOTÃO UPSELL KIWIFY -->
   <div class="upsell-wrap">
     <div style="text-align:center" id="kiwify-upsell-DJozjdY" data-upsell-url="https://obrigado-arsenal.lovable.app" data-downsell-url="https://codigodareconquist.lovable.app">
       <button id="kiwify-upsell-trigger-DJozjdY" style="background-color:#F39C19;padding:12px 16px;cursor:pointer;color:#FFFFFF;font-weight:600;border-radius:4px;border:1px solid #F39C19;font-size:20px;">Sim, quero o Arsenal completo!</button>
-      <div id="kiwify-upsell-cancel-trigger-DJozjdY" style="margin-top:1rem;cursor:pointer;font-size:16px;text-decoration:underline;font-family:sans-serif;">Não, prefiro continuar sem isso</div>
+      <div id="kiwify-upsell-cancel-trigger-DJozjdY" style="margin-top:1rem;cursor:pointer;font-size:16px;text-decoration:underline;font-family:sans-serif;">Não, prefiro continuar sozinha — vou escrever por conta própria</div>
     </div>
     <script src="https://snippets.kiwify.com/upsell/upsell.min.js"></script>
   </div>
-
+ 
   <!-- GARANTIA -->
   <div class="garantia">
     <span class="garantia-icon">🛡️</span>
@@ -318,7 +337,7 @@ body{
       <p>Se não gostar por qualquer motivo, devolvemos 100% do seu dinheiro. Sem perguntas.</p>
     </div>
   </div>
-
+ 
 </div>
 </body>
 </html>
